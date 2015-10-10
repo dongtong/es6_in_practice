@@ -43,3 +43,11 @@ Examples:
         }
         return `${strings[0]} ${values[0]} ${strings[1]} ${values[1]}`;
     }
+    
+Run: /Users/mac/.nvm/versions/node/v0.12.7/bin/traceur /Users/mac/WebstormProjects/ES6_In_Practice/string_template.js
+
+    Hello World
+    Hello, ES6
+          Welcome!
+    3
+    It's  0  I'm  awake
