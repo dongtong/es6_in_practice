@@ -1,5 +1,9 @@
 # ECMAScript 6(2015) in Practice
 
+* Tools
+  
+I use [es6fiddle.net](http://es6fiddle.net) online website to try es6 features.
+
 * String Template
 
 In ES5, we concat string by using following way:
@@ -44,7 +48,7 @@ Examples:
         return `${strings[0]} ${values[0]} ${strings[1]} ${values[1]}`;
     }
     
-Run: /Users/mac/.nvm/versions/node/v0.12.7/bin/traceur /Users/mac/WebstormProjects/ES6_In_Practice/string_template.js
+Run: 
 
     Hello World
     Hello, ES6
