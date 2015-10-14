@@ -81,3 +81,23 @@ Const variable scope is block. In ES5 variable scope is functional, not block.
       const age = 30;
     }
     console.log('age: ', age); // age is not defined
+    
+* Default argument
+
+In ES5, we could default default argument in function. Now we could try it in ES6.
+
+    function greet(name="foobar", word='Hello, World') {
+      console.log(name);
+      console.log(word);
+    }
+
+    greet(); //foobar Hello, World
+    greet("chachacha"); // chachacha Hello, World
+    greet(..."Hello, ES6"); // H, e
+    
+We could pass function as default argument.
+
+    function greet(speak = ()=> console.log("Hello, World")){
+        speak();
+    }
+    greet(); // Hello, World
