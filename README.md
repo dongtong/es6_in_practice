@@ -55,3 +55,29 @@ Run:
           Welcome!
     3
     It's  0  I'm  awake
+    
+* Const
+
+In ES5, we use var keyword and uppercase to define const variable. Now in ES6, we could use const keyword to define.
+
+    const VALUE = 'Hello World';
+    //VALUE = 'foobar'; //VALUE is read-only
+    console.log(VALUE);
+
+Once we define const variable, we could not modify its value, but we could modify its reference value as following:
+
+    const person = {name: 'foobar'};
+    person['age'] = 30;
+    console.log(JSON.stringify(person)); // {"name":"foobar","age":30}
+    
+Const variable scope is block. In ES5 variable scope is functional, not block.
+
+    if(true) {
+      const name = 'foobar';
+    }
+    console.log('name: ', name); // name is not defined
+    
+    {
+      const age = 30;
+    }
+    console.log('age: ', age); // age is not defined
