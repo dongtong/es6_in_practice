@@ -1,29 +1,30 @@
 # ECMAScript 6(2015) in Practice
 
-* Tools
+## 1. 在线开发工具
   
-I use [es6fiddle.net](http://es6fiddle.net) online website to try es6 features.
+   使用 [es6fiddle.net](http://es6fiddle.net)
 
-* String Template
+## String 模版
 
-In ES5, we concat string by using following way:
+在ES5中, 我们经常通过以下方式连接字符串:
 
     var part1 = "Hello ",
         greeting = part1 + "World";
     console.log(greeting); //Hello World
     
-Now we could use ES6 string template as following:
+ES6中可以使用字符串模版连接:
 
     var part1 = "Hello",
         greeting = `${part1} world`;
+        
     console.log(greeting);
     
     var greeting2 = `${part1}
        World
     `
-String template will output as you want. It use ${} to introspect expression.
+字符串模版会按照你预期的结果输出，通过${}自省执行表达式。
 
-Examples:
+示例:
 
     var part1 = "Hello",
     greeting = `${part1} World`;
@@ -48,7 +49,7 @@ Examples:
         return `${strings[0]} ${values[0]} ${strings[1]} ${values[1]}`;
     }
     
-Run: 
+运行结果: 
 
     Hello World
     Hello, ES6
@@ -56,21 +57,21 @@ Run:
     3
     It's  0  I'm  awake
     
-* Const
+## 常量
 
-In ES5, we use var keyword and uppercase to define const variable. Now in ES6, we could use const keyword to define.
+在ES5中通过定义大写字母的变量作为常量， ES6中通过const定义常量.
 
     const VALUE = 'Hello World';
     //VALUE = 'foobar'; //VALUE is read-only
     console.log(VALUE);
 
-Once we define const variable, we could not modify its value, but we could modify its reference value as following:
+一旦定义常量，将无法改变它的值，但是如果常量定义成字面量对象，可以修改它引用的值:
 
     const person = {name: 'foobar'};
     person['age'] = 30;
     console.log(JSON.stringify(person)); // {"name":"foobar","age":30}
     
-Const variable scope is block. In ES5 variable scope is functional, not block.
+常量作用域是块级作用域。在ES5中作用域是函数级别的。
 
     if(true) {
       const name = 'foobar';
@@ -82,9 +83,9 @@ Const variable scope is block. In ES5 variable scope is functional, not block.
     }
     console.log('age: ', age); // age is not defined
     
-* Default argument
+## 默认参数
 
-In ES5, we could default default argument in function. Now we could try it in ES6.
+ES5中无法給函数参数设定默认值，但是在ES6中可以设置:
 
     function greet(name="foobar", word='Hello, World') {
       console.log(name);
@@ -95,7 +96,7 @@ In ES5, we could default default argument in function. Now we could try it in ES
     greet("chachacha"); // chachacha Hello, World
     greet(..."Hello, ES6"); // H, e
     
-We could pass function as default argument.
+可以传递一个函数作为默认值.
 
     function greet(speak = ()=> console.log("Hello, World")){
         speak();
