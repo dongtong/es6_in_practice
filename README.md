@@ -102,3 +102,23 @@ ES5中无法給函数参数设定默认值，但是在ES6中可以设置:
         speak();
     }
     greet(); // Hello, World
+
+##Spread/Rest操作符
+
+Spread(扩展操作符),将可迭代对象(数组居多)中每一个元素扩散(spread)开,赋值給不同的值。
+
+示例:
+
+    function add(a, b) {
+        return a + b;
+    }
+
+    let nums = [5, 4];
+
+    console.log(add(...nums));
+
+示例:
+
+    let arr1 = [2,3];
+    let arr2 = [1, ...arr1, 4];
+    console.log(arr2);
